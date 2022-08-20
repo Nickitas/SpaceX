@@ -1,0 +1,115 @@
+.planet {
+    position: fixed;
+    top: 25%;
+    left: 39%;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background: url(../../../../public/img/planet.png) no-repeat center;
+
+    box-shadow: 0px 0px 150px 80px rgba(221, 0, 0, 0.2), inset 0px 0px 3vw 0.2vw #AC1C1C;
+    filter: drop-shadow(0px 0.208vw 0.208vw rgba(0, 0, 0, 0.25));
+    background-size: cover;
+
+    animation: spin 140s infinite;
+    -webkit-animation: spin 140s infinite;
+}
+
+.highlight {
+    position: fixed;
+    z-index: 1;
+    bottom: 6%;
+    right: 31%;
+    width: 8vw;
+    min-width: 350px;
+    height: 8vw;
+    min-height: 350px;
+    border-radius: 50%;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(244, 243, 223, 0.83) 25.52%, rgba(242, 198, 32, 0.45) 45.83%, #FF5C00 74.48%, rgba(163, 71, 33, 0.88) 100%);
+    box-shadow: 10px 10px 250px rgba(160, 53, 31, 0.2);
+    filter: blur(100px);
+
+    @media (max-width:1229px) {
+        bottom: 22%;
+        right: 24%;
+    }
+    @media (max-width:964px) {
+        min-width: auto;
+        bottom: 31%;
+        right: 28%;
+    }
+
+}
+
+.glow {
+    position: fixed;
+    top: 66%;
+    left: 57%;
+    z-index: 9;
+    width: 11.7vw;
+    height: 11.7vw;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    
+    background: radial-gradient(50% 50% at 50% 50%, #F4F3DF 24.79%, #F2C620 37.81%, rgba(255, 101, 14, 0.9) 60.73%, rgba(255, 80, 8, 0.8) 84.69%);
+    filter: blur(110px);
+
+    animation: pulse 6s infinite;
+    -webkit-animation: pulse 6s infinite;
+
+    @media (max-width:1229px) {
+        top: 41%;
+        left: 50%;
+    }
+    @media (max-width:964px) {
+        top: 35%;
+        left: 45%;
+    }
+}
+
+.sun {
+    position: fixed;
+    top: 41%;
+    left: 46%;
+    background: no-repeat url(../../../../public/img/sun.png) center;
+    background-size: contain;
+    z-index: -1;
+    width: 24vw;
+    height: 24vw;
+    min-width: 450px;
+    border-radius: 50%;
+
+    @media (max-width:1229px) {
+        top: 34%;
+        left: 38%;
+    }
+    @media (max-width:834px) {
+        top: 31%;
+        left: 30%;
+    }
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    from { transform: scale(.7); }
+    50% { transform: scale(1.05); }
+    to { transform: scale(.7); }
+}
+
+@-webkit-keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes pulse {
+    from { transform: scale(.7); }
+    50% { transform: scale(1.05); }
+    to { transform: scale(.7); }
+}

@@ -1,0 +1,170 @@
+.button_and_rocket {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 19.5vw;
+    margin: 0 auto;
+    width: 50%;
+
+    @media (max-width:652px) {
+        left: 15px;
+    }
+}
+
+.Button {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    padding: 10px 25px;
+    width: 180px;
+    height: 35px;
+    max-width: 180px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .45s ease-in;
+
+    &::before {
+        content: url(../../../public/img/brd-top.svg);
+        position: absolute;
+        top: -6px;
+        right: -6px;
+    }
+    &::after {
+        content: url(../../../public/img/brd-bottom.svg);
+        position: absolute;
+        bottom: -9px;
+        left: -6px;
+    }
+}
+
+.line {
+    position: absolute;
+    top: 81px;
+    left: 239px;
+
+    width: 330px;
+    height: 55px;
+
+    transform: skew(60deg);
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff; 
+
+    transition: all .8s ease-in;
+}
+
+.rocket {
+    position: absolute;
+    z-index: 0;
+    top: 86px;
+    left: 608px;
+    transition: all 5s ease-in;    
+}
+
+.Button:hover {
+    border: 1px solid #24599C;
+}
+
+.button_and_rocket:hover .line {
+    opacity: 0;
+}
+.button_and_rocket:hover .rocket {
+    animation: 8s pusk;
+    -webkit-animation: 8s pusk;
+}
+
+
+@media (max-width:1500px) {
+    .line {
+        left: 8%;
+        width: 49%;
+        transform: skew(20deg);
+    }
+    .rocket {
+        left: 59%;   
+    }
+}
+
+@keyframes pusk {
+    0% {
+        top: 86px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    10% { 
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    20% { 
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    30% { 
+        top: -320px;
+        transform: scale(0.4);
+        opacity: .4;
+    }
+    40% { 
+        transform: scale(0.2); 
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        transform: scale(0.2);
+    }
+    90% {
+        top: 260px;
+        transform: scale(0.4);
+        opacity: .4;
+    }
+    100% { 
+        top: 86px;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes pusk {
+    0% {
+        top: 86px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    10% { 
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    20% { 
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    30% { 
+        top: -320px;
+        transform: scale(0.4);
+        opacity: .4;
+    }
+    40% { 
+        transform: scale(0.2); 
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        transform: scale(0.2);
+    }
+    90% {
+        top: 260px;
+        transform: scale(0.4);
+        opacity: .4;
+    }
+    100% { 
+        top: 86px;
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,81 @@
+@import '../../../responsive_font.scss';
+
+.benefits {
+    position: relative;
+    z-index: 999;
+}
+
+.wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    @media (max-width:1260px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+.card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10.938vw;
+    height: 10.938vw;
+    min-width: 130px;
+    min-height: 130px;
+
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-color: linear-gradient(183.01deg, rgba(217, 217, 217, 0) 14.7%, rgba(217, 217, 217, 0.71) 100%);;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:first-child {
+        background: linear-gradient(314.87deg, rgba(217, 217, 217, 0.04) 0%, rgba(217, 217, 217, 0) 56.08%);
+        &:hover {
+            border-width: 0px 1px 1px 0px;
+            background: linear-gradient(314.87deg, rgba(217, 217, 217, 0.122) 0%, rgba(217, 217, 217, 0) 56.08%);
+        }
+    }
+    &:nth-child(2) {
+        background: linear-gradient(45deg, rgba(217, 217, 217, 0.04) 0%, rgba(217, 217, 217, 0) 56.56%);
+        &:hover {
+            border-width: 0px 0px 1px 1px;
+            background: linear-gradient(45deg, rgba(217, 217, 217, 0.122) 0%, rgba(217, 217, 217, 0) 56.56%);
+        }
+    }
+    &:nth-child(3) {
+        background: linear-gradient(225deg, rgba(217, 217, 217, 0.04) 0%, rgba(217, 217, 217, 0) 56.56%);
+        &:hover {
+            border-width: 1px 1px 0px 0px;
+            background: linear-gradient(225deg, rgba(217, 217, 217, 0.122) 0%, rgba(217, 217, 217, 0) 56.56%);
+        }
+    }
+    &:last-child {
+        background: linear-gradient(134.45deg, rgba(217, 217, 217, 0.04) 0.94%, rgba(217, 217, 217, 0) 56.97%);
+        &:hover {
+            border-width: 1px 0px 0px 1px;
+            background: linear-gradient(134.45deg, rgba(217, 217, 217, 0.122) 0.94%, rgba(217, 217, 217, 0) 56.97%);
+        }
+    }
+
+    p {
+        @include responsive_font(14, 10);
+        font-weight: 100;
+        font-family: 'MuseoSansCyrl_100', Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    h2 {
+        margin: 25px 0 8px;
+        @include responsive_font(38, 18);
+        font-weight: 900;
+        font-family: 'MuseoSansCyrl_900', Arial, Helvetica, sans-serif;
+    }
+}

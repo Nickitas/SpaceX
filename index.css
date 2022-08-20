@@ -1,0 +1,69 @@
+@font-face { 
+  font-family: 'MuseoSansCyrl_100';
+  src: url(../public/fonts/MuseoSansCyrl/MuseoSansCyrl100.ttf) format("otf");
+}
+@font-face { 
+  font-family: 'MuseoSansCyrl_300';
+  src: url(../public/fonts/MuseoSansCyrl/MuseoSansCyrl300.ttf) format("otf");
+}
+@font-face { 
+  font-family: 'MuseoSansCyrl_700';
+  src: url(../public/fonts/MuseoSansCyrl/MuseoSansCyrl700.ttf) format("otf");
+}
+@font-face { 
+  font-family: 'MuseoSansCyrl_900';
+  src: url(../public/fonts/MuseoSansCyrl/MuseoSansCyrl900.ttf) format("otf");
+}
+
+
+
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 3px #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+body {
+  font-family: 'MuseoSansCyrl_300', Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main.App {
+  width: 100%;
+  height: 100%;
+  background: no-repeat url(../public/img/space2.png) center;
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 19.5vw;
+}
+
+@media (max-width:652px) {
+  .container {
+    padding: 0 15px;
+  }
+}

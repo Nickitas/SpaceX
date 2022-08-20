@@ -1,0 +1,41 @@
+@import '../../../responsive_font.scss';
+
+.hellow {
+
+    .title {
+        @include responsive-font(58, 24);
+        font-weight: 700;
+        line-height: 1.2;
+        font-family: 'MuseoSansCyrl_700', Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        background-image: linear-gradient(90deg, #fff, #ffd8d8, #ff6b3d, #ff4106);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        background-size: 150% 150%;
+	    animation: gradient 4s ease infinite;
+	    -webkit-animation: gradient 4s ease infinite;
+    }
+    
+    .subtitle {
+        @include responsive-font(24, 14);
+        font-weight: 300;
+        font-family: 'MuseoSansCyrl_300', Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        background-image: linear-gradient(90deg, #fff, #ff4106);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 50% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@-webkit-keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 50% 50%; }
+	100% { background-position: 0% 50%; }
+}
